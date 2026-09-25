@@ -19,8 +19,9 @@ public class Menu {
      * Creates an empty menu: initialize the array with capacity 10
      * and the counter with 0.
      */
+    private String Menu[];
     public Menu() {
-        throw new UnsupportedOperationException("Not implemented yet");
+        
     }
 
     /**
