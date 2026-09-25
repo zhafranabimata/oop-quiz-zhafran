@@ -43,7 +43,7 @@ public class Customer {
         if (name != " " || name != null){
             this.name = name;
         } else{
-            System.out.print("Namanya Kosong!")
+            System.out.print("Namanya Kosong!");
         }
     }
 }
