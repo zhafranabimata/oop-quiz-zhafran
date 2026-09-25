@@ -16,12 +16,20 @@ package id.ac.polinema.oop;
 public class Menu {
 
     /**
+public class Menu {
+    // Sesuai dengan diagram sebelumnya, asumsikan atribut ini sudah dideklarasikan di atas:
+    // private MenuItem[] items;
+    // private int itemCount;
+
+    /**
      * Creates an empty menu: initialize the array with capacity 10
      * and the counter with 0.
      */
-    private String Menu[];
+    private MenuItem[] items;
+    private int itemCount;
     public Menu() {
-        
+        this.items = new MenuItem[10];
+        this.itemCount = 0;
     }
 
     /**
@@ -31,7 +39,10 @@ public class Menu {
      * @param item the menu item to add
      */
     public void addMenuItem(MenuItem item) {
-        throw new UnsupportedOperationException("Not implemented yet");
+        if (this.itemCount < 10) {
+            this.items[this.itemCount] = item;
+            this.itemCount++;
+        }
     }
 
     /**
@@ -41,10 +52,15 @@ public class Menu {
      * @return the matching MenuItem, or {@code null} when not found
      */
     public MenuItem findItem(String name) {
-        throw new UnsupportedOperationException("Not implemented yet");
+        for (int i = 0; i < this.itemCount; i++) {
+            if (this.items[i].getName().equals(name)) {
+                return this.items[i];
+            }
+        }
+        return null;
     }
 
     public int getItemCount() {
-        throw new UnsupportedOperationException("Not implemented yet");
+        return this.itemCount;
     }
 }

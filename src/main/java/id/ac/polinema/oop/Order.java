@@ -7,7 +7,7 @@ public class Order {
 
     public Order(Customer customer) {
         this.customer = customer;
-        this.items = new OrderItem[10];
+        this.items = new OrderItem[10]; 
         this.itemCount = 0;
     }
 
@@ -37,7 +37,7 @@ public class Order {
     }
 
     public double getFinalTotal() {
-        
         return getTotal();
     }
 }
+
