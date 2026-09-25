@@ -42,6 +42,8 @@ public class Customer {
     public void setName(String name) {
         if (name != " " || name != null){
             this.name = name;
+        } else{
+            System.out.print("Namanya Kosong!")
         }
     }
 }
