@@ -44,5 +44,7 @@ public class MenuItem {
      * @param price new price in Rupiah
      */
     public void setPrice(double price) {
+        this.price = price;
     }
 }
+
